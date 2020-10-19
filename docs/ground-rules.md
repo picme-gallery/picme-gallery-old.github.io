@@ -17,3 +17,6 @@ Please communicate your needs and grievances with each other as soon as possible
 
 * What practices do intend to use for resolution of conflicts?
 > First, we will sit-down and have a short meeting to communicate what the conflict is. Then we will work to resolve the issue quickly as a team. More specifically, if conflicts continue then they will be resolved democratically via a required majority ⅔ vote to proceed.
+
+*Management of Branches and Merging
+>We will manage all of our project branches by working on our own individual branches for different features that we will be working on. From there, we will get together before merging  to the master and confirm that the branch we will be merging from is working properly.
