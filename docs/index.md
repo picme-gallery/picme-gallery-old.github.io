@@ -1,14 +1,14 @@
 ## Project Description
-Have you ever gone on a trip, or gone to a party with friends, but forgot to take photos or ask your friends to send you the photos? 
+Have you ever gone on a trip, or to a party with friends, but forgot to take photos? Or did you forget ask your friends to send you photos from the event? 
 Or have you ever come
-home from an event with mostly photos of your friends or acquaintances, but with only a few blurry, questionable selfies of yourself? Are you tired of taking great photos of others, but not having any of your own to show off? Well fear no more, PicMe is the app for you.
+home from an event with mostly photos of your friends or acquaintances, but with only a few grainy, questionable selfies of yourself? Are you tired of taking great photos of others, but not having any of your own to show off? Well fear no more, PicMe Gallery is the app for you.
 
-PicMe, is an app that allows users who are out at an event, or who are traveling together to get access to a secure, cloud-based photo gallery via a shared user key.
+PicMe Gallery, is an app that allows users who are out at an event, or who are traveling together to get access to a secure, cloud-based photo gallery via a shared user key.
 
-With PicMe in your pocket, you'll no longer have to beg your friends and family to share those photos with you, only to have
+With PicMe Gallery in your pocket, you'll no longer have to beg your friends and family to share those photos with you, only to have
 them send some mediocre ones where they look good, but you're blinking or looking slightly less than stellar.
 
-PicMe's goal is to 
+PicMe Gallery's goal is to 
 help family and friends seamlessly exchange photos they have of each other through a private-shared gallery that uploads seamlessly, once an event or trip is underway. Just join the event, set your phone to party mode (for seamless-uploading), and enjoy access to the party gallery for up to 3 days after the event. After that your photos are deleted from the online gallery, and you get to keep the ones you've downloaded.
 
 No need to mess with iMessage, Messenger, WhatsApp, Facebook, or Google Photos. If you have access to the private key for the gallery, just sign in, select your photos, download, and be on your way.
@@ -38,7 +38,7 @@ The client component will need access to:
 [//]: # (Geo-fencing seems pretty rad though!. Maybe we can eventually use it? https://developer.android.com/training/location/geofencing However, we don't want our app to be dependent on it.)
 
 
-## [Entity Classes](https://github.com/picme-gallery/picme-gallery-service/tree/master/src/main/java/edu/cnm/deepdive/picmegallery/model/entity)
+## [Entity Classes](https://github.com/picme-gallery/picme-gallery-service/tree/database/src/main/java/edu/cnm/deepdive/picmegallery/model/entity)
 * User
 > A user entity class that contains information regarding when a user account was created, the user id key,
 >and Google Oauth login credentials, amongst other things.
@@ -49,7 +49,7 @@ The client component will need access to:
 
 * Event
 > An event entity that acts as a _gallery_. It holds the event name, time, location, and password credentials required for
->access to upload photos to a PicMe Event. 
+>access to upload photos to a PicMe Gallery event. 
 
 ## [Entity-Relationship Diagram](work/entityRelationshipDiagram.md)
     
