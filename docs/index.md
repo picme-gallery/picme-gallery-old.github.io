@@ -55,43 +55,31 @@ protests such as those from the Black Lives Matter movement, so that I can share
 * **Device/external services**
 
     The client component will need access to:
-    1. Native Camera App
-    2. WiFi and  Network Services
-    3. I'm thinking of removing the GPS services, because using a generated key may be similar in functionality, and just as effective.
-    4. Access to the native Android Gallery
-    5. Google OAuth [Google OAuth2.0](https://developers.google.com/assistant/identity/google-sign-in-oauth)
-    6. Potentially may use the [Google ML Kit](https://developers.google.com/ml-kit/vision/face-detection)
-    for face detection to sort through the gallery.
+    1. [Native Camera App](https://developer.android.com/training/camera/photobasics)
+        > This service will be used by PicMe Gallery to allow our user's to upload photos directly from within our app, without having to switch back to the native camera app.
+        This service is for convenience. If the service is interrupted, then the users will still be able to upload a photo by taking a picture, and then uploading it to PicMe Gallery.
+    2. [App Data and Files](https://developer.android.com/guide/topics/data)
+        > This service will be used by our app to complete the file-sharing portion of PicMe Gallery's features. It will allow users to save files on their phone.
+        Simultaneously, this service will also allow users to share files (photos) to the gallery (Events) that is hosted on the server or Web.
+        If access to App Data and Files, or more specifically the shared-storage and file-sharing that is a part of App Data and Files is interrupted it will effectively render our app useless.
     
+    3. [Google OAuth2.0](https://developers.google.com/assistant/identity/google-sign-in-oauth)
+        > This service will be used by our app to keep track of our user base. Furthermore, it will allow us to 
 
-## Server component
 
-* **Functionality**
+## [Entity Classes](https://github.com/picme-gallery/picme-gallery-service/tree/master/src/main/java/edu/cnm/deepdive/picmegallery/model/entity)
+* User
+> A user entity class that contains information regarding when a user account was created, the user id key,
+>and other Google Oauth login credentials, amongst other things.
+  
+* Photo
+> A photo entity class that contains the location and time-taken photo metadata, as well as, time when a photo is uploaded to the PicMe Gallery Service.
+>Additionally, it holds the information regarding which users uploaded which photo, as well as, the info on what event each photo is associated with.
 
-    This is where most of the functionality of PicMe will be.
-    The server will host a gallery of photos. By utilizing a user registry it will allow users access to that gallery to auto-upload taken photos, and selectively download photos already
-    in the gallery. The server will host these photos for only a few days and automatically delete the photos utilizing mySQL delete commands to clear the relational database.
+* Event
+> An event entity that acts as a _gallery_. It holds the event name, time, location, and password credentials required for
+>access to upload photos to a PicMe Event. 
 
-    The server will also authenticate whether or not users have access to a cloud-hosted gallery by comparing the gallery moderator's key and the user-entered
-    authentication key to make sure the proper users have access to the gallery. 
-    REST-based web services, may be used to GET, POST, PUT, and DELETE shared photos from a gallery, if implementation shifts towards a website platform. 
-
-* **Persistent data**
-
-    Persistent data will include:
-    1. Users who have active access to the gallery. (Whomever creates the gallery in the first place will have access to moderate it)
+## [Entity-Relationship Diagram](work/entityRelationshipDiagram.md)
     
-    2. User IDs or unique identifiers to each user's OAuth 2.0 account that has access to the gallery. These unique identifiers will have a slot of their own in the server side database which will correspond to an SQL JOINs Query to an ERD, which stores the user taken photos with a unique key-identifier.
-    
-    3. An array of shared photos, sorted by photo metadata time-stamps. 
-    
-
-* **External services**
-
-    I'm currently steering away from integrating preexisting external services; however, there's potential to integrate the app with posting to Instagram, in the future.
-    
-## Stretch goals/possible enhancements
-
-The implementation of the project on the base level will already be very time-intensive.
-
-However, it would be great to reach the additional goal of implementing a feature that allows posting directly from PicMe's shared gallery to Instagram. In general, the ability to share from a gallery to a post on another platform is what I'm referring to.
+## [Team Ground Rules](ground-rules.md)
