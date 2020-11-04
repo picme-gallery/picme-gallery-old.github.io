@@ -20,5 +20,5 @@ Please communicate your needs and grievances with each other as soon as possible
 > We will manage all of our project branches by working on our own individual branches for different features that we will be working on. From there, we will get together before merging  to the master and confirm that the branch we will be merging from is working properly.
 
 * Daily Scrum
-> We will hold a 5-minute daily scrum at the tail end of our lunch break. So from 12:55 P.M. to 1:00 P.M. everyday we have class.
+> We will hold a 5-minute daily scrum at the end of class. So from 5:00 P.M. to 5:15P.M. everyday we have class.
 >During the scrum we will update each other on our progress, what we're working on, and what we're struggling with.
