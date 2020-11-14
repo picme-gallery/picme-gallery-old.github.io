@@ -50,5 +50,5 @@ The client component will need access to:
 
 ## [Entity-Relationship Diagram](work/entityRelationshipDiagram.md)
 
-## Google
+## Google Sign In
     
