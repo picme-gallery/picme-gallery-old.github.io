@@ -1,8 +1,5 @@
 # Ground Rules
 
-* What is each team member's contact info, that the rest of the team can use to reach the members of the team?
-> Phone numbers include: Alex (505-903-9004), Shayan (801-833-5080), Isaac (575-200-2434)
-
 * What are the core practices you will use to coordinate your work as a team?
 >The members of PicMe Gallery's team will check in every day via Zoom around 6:30 P.M. (We can change the time, just communicate via Slack between the class breaks.)
 During a check-in we'll decide on tasks to complete and who will complete what tasks.
